@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="3" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.et.listeners.ListenerClass"/>
+    <listener class-name="com.et.listeners.MethodInteceptor"/>
+    <listener class-name="com.et.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="com.et.tests.LoginPageTest">
+        <methods>
+          <include name="LoginLogoutTest2" invocation-numbers="0"/>
+          <include name="LoginLogoutTest3" invocation-numbers="0"/>
+          <include name="LoginLogoutTest1" invocation-numbers="0"/>
+          <include name="LoginLogoutTest" invocation-numbers="0"/>
+          <include name="LoginLogoutTest4" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="LoginLogoutTest6" invocation-numbers="0"/>
+          <include name="LoginLogoutTest5" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.et.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
